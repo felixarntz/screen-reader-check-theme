@@ -1,0 +1,22 @@
+{
+  "name": "screen-reader-check-theme",
+  "version": "1.0.0",
+  "description": "Theme for the Screen Reader Check plugin, based on Bootstrap.",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "https://screen-reader-check.felix-arntz.me",
+  "authors": [
+    {
+      "name": "Felix Arntz",
+      "email": "felix-arntz@leaves-and-love.net",
+      "homepage": "https://leaves-and-love.net"
+    }
+  ],
+  "dependencies": {
+    "bootstrap": "~4.0.0",
+    "font-awesome": "~4.6.1",
+    "fancybox": "~2.1.5"
+  }
+}

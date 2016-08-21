@@ -1,0 +1,30 @@
+{
+  "name": "felixarntz/screen-reader-check-theme",
+  "description": "Theme for the Screen Reader Check plugin, based on Bootstrap.",
+  "version": "1.0.0",
+  "license": "GPL-3.0",
+  "type": "wordpress-theme",
+  "keywords": [
+    "wordpress",
+    "theme"
+  ],
+  "homepage": "https://screen-reader-check.felix-arntz.me",
+  "authors": [
+    {
+      "name": "Felix Arntz",
+      "email": "felix-arntz@leaves-and-love.net",
+      "homepage": "https://leaves-and-love.net",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "felix-arntz@leaves-and-love.net",
+    "issues": "https://github.com/felixarntz/screen-reader-check-theme/issues"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}

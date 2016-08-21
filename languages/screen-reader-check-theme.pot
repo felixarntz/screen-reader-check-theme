@@ -1,0 +1,88 @@
+# Copyright (C) 2016 screen-reader-check-theme
+# This file is distributed under the same license as the screen-reader-check-theme package.
+msgid ""
+msgstr ""
+"Project-Id-Version: screen-reader-check-theme\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
+"report-msgid-bugs-to: https://screen-reader-check.felix-arntz.me\n"
+"x-generator: gulp-wp-pot\n"
+"x-poedit-basepath: .\n"
+"x-poedit-language: English\n"
+"x-poedit-country: UNITED STATES\n"
+"x-poedit-sourcecharset: uft-8\n"
+"x-poedit-keywordslist: __;_e;_x:1,2c;_ex:1,2c;_n:1,2; _nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__; esc_html__;esc_attr_e; esc_html_e;esc_attr_x:1,2c; esc_html_x:1,2c;\n"
+"x-poedit-bookmars: \n"
+"x-poedit-searchpath-0: .\n"
+"x-textdomain-support: yes\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n\n"
+
+#: front-page.php:18
+msgid "Check your code now"
+msgstr ""
+
+#: front-page.php:23
+msgid "URL"
+msgstr ""
+
+#: front-page.php:28
+msgid "Enter the URL of the website you would like to check."
+msgstr ""
+
+#: front-page.php:33, front-page.php:57
+msgid "Submit"
+msgstr ""
+
+#: front-page.php:39
+msgid "Or enter the HTML code directly"
+msgstr ""
+
+#: front-page.php:47
+msgid "HTML Code"
+msgstr ""
+
+#: front-page.php:52
+msgid "Enter the HTML code you would like to check."
+msgstr ""
+
+#: front-page.php:63
+msgid "Or enter the URL of a website"
+msgstr ""
+
+#: front-page.php:72
+msgid "Advanced Options"
+msgstr ""
+
+#: functions.php:41, header.php:39
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:42
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:54
+msgid "Primary Sidebar"
+msgstr ""
+
+#: functions.php:56
+msgid "This sidebar is shown beside the main content."
+msgstr ""
+
+#: functions.php:69
+msgid "Screen Reader Check Theme"
+msgstr ""
+
+#: functions.php:70
+msgid "Theme for the Screen Reader Check plugin, based on Bootstrap."
+msgstr ""
+
+#: header.php:19
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:40
+msgid "Toggle navigation"
+msgstr ""

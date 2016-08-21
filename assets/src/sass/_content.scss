@@ -1,0 +1,48 @@
+.post-content,
+.comment-content {
+	> div {
+		margin-bottom: 1rem;
+	}
+
+	blockquote {
+		padding: ($spacer / 2) $spacer;
+		margin-bottom: $spacer;
+		font-size: $blockquote-font-size;
+		border-left: .25rem solid $blockquote-border-color;
+
+		p {
+			margin-bottom: 0;
+		}
+
+		p cite,
+		footer {
+			display: block;
+			font-size: 80%; // back to default font-size
+			line-height: $line-height-base;
+			color: $blockquote-small-color;
+		}
+
+		footer {
+			margin-top: 1rem;
+		}
+	}
+}
+
+.wp-post-image-link,
+.wp-post-image {
+	display: block;
+}
+
+.wp-post-image {
+	margin-bottom: 1rem;
+}
+
+iframe,
+twitterwidget {
+	display: block;
+	margin: 0 auto;
+}
+
+.instagram-media {
+	margin: 0 auto !important;
+}
