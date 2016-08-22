@@ -37,7 +37,7 @@
 				<?php if ( has_nav_menu( 'primary' ) ) : ?>
 					<nav class="navbar navbar-light" role="navigation">
 						<h2 class="screen-reader-text"><?php _e( 'Primary Navigation', 'screen-reader-check-theme' ); ?></h2>
-						<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-navigation" aria-controls="primary-navigation" aria-expanded="false" aria-label="<?php _e( 'Toggle navigation', 'screen-reader-check-theme' ); ?>">&#9776;</button>
+						<button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#primary-navigation" aria-controls="primary-navigation" aria-expanded="false" aria-label="<?php _e( 'Toggle navigation', 'screen-reader-check-theme' ); ?>"><span aria-hidden="true">&#9776;</span></button>
 						<div id="primary-navigation" class="collapse navbar-toggleable-xs">
 							<?php srctheme_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav navbar-nav' ) ); ?>
 						</div>

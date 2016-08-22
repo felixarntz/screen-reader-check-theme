@@ -79,16 +79,28 @@ function srctheme_enqueue_scripts() {
 			'init_fancybox'	=> true,
 			'wrap_embeds'	=> true,
 		),
-		'i18n'			=> array(),
+		'i18n'			=> array(
+			'plugin_missing'    => __( 'Screen Reader Check plugin is missing!', 'screen-reader-check-theme' ),
+			'an_error_occurred' => __( 'An error occurred!', 'screen-reader-check-theme' ),
+			'close'             => __( 'Close', 'screen-reader-check-theme' ),
+			'action_required'   => __( 'Your action is required.', 'screen-reader-check-theme' ),
+			'submit'            => __( 'Submit', 'screen-reader-check-theme' ),
+		),
 	);
 
-	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/dist/js/bootstrap' . $min . '.js', array( 'jquery' ), '4.0.0', true );
+	wp_enqueue_script( 'tether', get_template_directory_uri() . '/assets/vendor/tether/dist/js/tether' . $min . '.js', array(), '1.3.4', true );
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/dist/js/bootstrap' . $min . '.js', array( 'jquery', 'tether' ), '4.0.0', true );
 
 	wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/assets/vendor/fancybox/source/jquery.fancybox.css', array(), '2.1.5' );
 	wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/assets/vendor/fancybox/source/jquery.fancybox.pack.js', array( 'jquery' ), '2.1.5', true );
 
+	$dependencies = array( 'jquery', 'wp-util', 'fancybox' );
+	if ( is_front_page() ) {
+		$dependencies[] = 'screen-reader-check';
+	}
+
 	wp_enqueue_style( 'screen-reader-check-theme', get_template_directory_uri() . '/assets/dist/css/app' . $min . '.css', array(), SCREEN_READER_CHECK_THEME_VERSION, 'all' );
-	wp_enqueue_script( 'screen-reader-check-theme', get_template_directory_uri() . '/assets/dist/js/app' . $min . '.js', array( 'jquery', 'wp-util', 'fancybox' ), SCREEN_READER_CHECK_THEME_VERSION, true );
+	wp_enqueue_script( 'screen-reader-check-theme', get_template_directory_uri() . '/assets/dist/js/app' . $min . '.js', $dependencies, SCREEN_READER_CHECK_THEME_VERSION, true );
 	wp_localize_script( 'screen-reader-check-theme', 'wp_theme', $vars );
 
 	if ( is_singular() ) {

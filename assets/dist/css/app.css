@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* BOOTSTRAP */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
@@ -6247,6 +6248,27 @@ body {
 	display: inline-block;
 }
 
+.site-title a:before {
+	display: inline-block;
+	margin-right: 10px;
+	font: normal normal normal 1rem/1 FontAwesome;
+	font-size: inherit;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: baseline;
+	content: ""; 
+
+	speak: none;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.site-title a:hover {
+	text-decoration: none;
+}
+
 .screen-reader-check-form {
 	max-width: 48rem; 
 	margin: 3rem auto 5rem;
@@ -6258,6 +6280,109 @@ body {
 }
 .screen-reader-check-form #html {
 	font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.screen-reader-check-form .advanced-options .card-header {
+	padding: 0.5rem 1rem;
+	margin-bottom: 0;
+	font-weight: bold; 
+	border-bottom: 0;
+}
+.screen-reader-check-form .advanced-options .card-block {
+	padding: 0.75rem 1rem;
+	font-size: 0.8rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.screen-reader-check-form .advanced-options .advanced-options-toggle {
+	float: right;
+}
+.screen-reader-check-form .advanced-options .advanced-options-toggle:hover,
+.screen-reader-check-form .advanced-options .advanced-options-toggle:focus {
+	text-decoration: none !important;
+}
+.screen-reader-check-form .advanced-options .advanced-options-toggle:before {
+	display: inline-block;
+	font: normal normal normal 1rem/1 FontAwesome;
+	font-size: inherit;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: baseline;
+	content: ""; 
+
+	speak: none;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.results {
+	margin-bottom: 3rem;
+}
+.results .card-header {
+	margin-bottom: 0;
+}
+.results .card-header .src-loader {
+	display: none;
+	float: right;
+}
+.results .card-block > ul {
+	margin-bottom: 0;
+}
+.results .result {
+	display: block;
+	margin-bottom: 1rem;
+	border: 2px solid rgba(0, 0, 0, 0.125);
+}
+.results .result .result-inner {
+	padding: 0.5rem 1rem;
+}
+.results .result .result-inner > *:first-child {
+	padding: 0.5rem 1rem;
+	margin: -0.5rem -1rem 0.5rem;
+	background-color: #f5f5f5; 
+	border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+}
+.results .result .result-inner > *:last-child {
+	margin-bottom: 0 !important;
+}
+.results .result.result-success {
+	border-color: #d0e9c6;
+}
+.results .result.result-success .result-inner > *:first-child {
+	color: #3c763d;
+	background-color: #dff0d8; 
+	border-color: #d0e9c6;
+}
+.results .result.result-info {
+	border-color: #bcdff1;
+}
+.results .result.result-info .result-inner > *:first-child {
+	color: #31708f;
+	background-color: #d9edf7; 
+	border-color: #bcdff1;
+}
+.results .result.result-warning {
+	border-color: #faf2cc;
+}
+.results .result.result-warning .result-inner > *:first-child {
+	color: #8a6d3b;
+	background-color: #fcf8e3; 
+	border-color: #faf2cc;
+}
+.results .result.result-danger {
+	border-color: #ebcccc;
+}
+.results .result.result-danger .result-inner > *:first-child {
+	color: #a94442;
+	background-color: #f2dede; 
+	border-color: #ebcccc;
+}
+.results .result .code-snippet {
+	width: 100%;
+	padding: 0.25rem 0.5rem;
+	font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	color: #a00;
+	background-color: #eee;
 }
 
 .custom-logo {
@@ -6272,5 +6397,47 @@ body {
 	}
 	.admin-bar .custom-logo {
 		top: 32px;
+	}
+}
+
+.src-loader {
+	-webkit-animation: src-spin 1s infinite steps(8);
+	        animation: src-spin 1s infinite steps(8);
+}
+.src-loader:before {
+	display: inline-block;
+	font: normal normal normal 1rem/1 FontAwesome;
+	font-size: inherit;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: baseline;
+	content: ""; 
+
+	speak: none;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@-webkit-keyframes src-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		        transform: rotate(359deg);
+	}
+}
+
+@keyframes src-spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(359deg);
+		        transform: rotate(359deg);
 	}
 }
