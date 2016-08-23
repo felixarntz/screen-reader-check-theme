@@ -203,8 +203,6 @@
 		handle_test_result: function( result, callback ) {
 			var update = true;
 
-			console.log( 'handling test result', result );
-
 			var type = 'error' === result.type ? 'danger' : result.type;
 
 			var $li = $( '#test_' + result.test_slug );
@@ -276,8 +274,6 @@
 					callback( theme.get_form_values( $form ) );
 				});
 			}
-
-			console.log( $li );
 
 			if ( update ) {
 				$li.html( $div );
