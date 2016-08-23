@@ -218,6 +218,12 @@
 			var $div = $( '<div class="result-inner"></div>' );
 			$div.append( '<h4>' + result.test_title + '</h4>' );
 
+			if ( result.test_description && result.test_description.length ) {
+				$div.append( '<h5>' + theme.i18n.test_description + '</h5>' );
+				$div.append( '<p>' + result.test_description + '</p>' );
+				$div.append( '<h5>' + theme.i18n.test_results + '</h5>' );
+			}
+
 			for ( var i in result.messages ) {
 				$div.append( '<p>' + result.messages[ i ] + '</p>' );
 			}

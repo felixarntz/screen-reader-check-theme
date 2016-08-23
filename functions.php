@@ -85,6 +85,8 @@ function srctheme_enqueue_scripts() {
 			'close'             => __( 'Close', 'screen-reader-check-theme' ),
 			'action_required'   => __( 'Your action is required.', 'screen-reader-check-theme' ),
 			'submit'            => __( 'Submit', 'screen-reader-check-theme' ),
+			'test_description'  => __( 'Test Description', 'screen-reader-check-theme' ),
+			'test_results'      => __( 'Test Results', 'screen-reader-check-theme' ),
 		),
 	);
 
