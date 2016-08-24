@@ -263,7 +263,7 @@
 				$row.append( $col1 );
 				$row.append( $col2 );
 
-				$form.append( '<p><strong>' + theme.i18n.action_required + '</strong></p>' );
+				$form.append( '<p><strong>' + theme.i18n.action_required + '</strong><br>' + theme.i18n.action_required_description + '</p>' );
 				$form.append( $row );
 				$form.append( '<div class="result-submit-wrap"><button type="submit" class="btn btn-primary">' + theme.i18n.submit + '</button></div>' );
 

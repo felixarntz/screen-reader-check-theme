@@ -80,13 +80,14 @@ function srctheme_enqueue_scripts() {
 			'wrap_embeds'	=> true,
 		),
 		'i18n'			=> array(
-			'plugin_missing'    => __( 'Screen Reader Check plugin is missing!', 'screen-reader-check-theme' ),
-			'an_error_occurred' => __( 'An error occurred!', 'screen-reader-check-theme' ),
-			'close'             => __( 'Close', 'screen-reader-check-theme' ),
-			'action_required'   => __( 'Your action is required.', 'screen-reader-check-theme' ),
-			'submit'            => __( 'Submit', 'screen-reader-check-theme' ),
-			'test_description'  => __( 'Test Description', 'screen-reader-check-theme' ),
-			'test_results'      => __( 'Test Results', 'screen-reader-check-theme' ),
+			'plugin_missing'              => __( 'Screen Reader Check plugin is missing!', 'screen-reader-check-theme' ),
+			'an_error_occurred'           => __( 'An error occurred!', 'screen-reader-check-theme' ),
+			'close'                       => __( 'Close', 'screen-reader-check-theme' ),
+			'action_required'             => __( 'Your action is required.', 'screen-reader-check-theme' ),
+			'action_required_description' => __( 'In order to complete this test, you need to provide some more information.', 'screen-reader-check-theme' ),
+			'submit'                      => __( 'Submit', 'screen-reader-check-theme' ),
+			'test_description'            => __( 'Test Description', 'screen-reader-check-theme' ),
+			'test_results'                => __( 'Test Results', 'screen-reader-check-theme' ),
 		),
 	);
 
