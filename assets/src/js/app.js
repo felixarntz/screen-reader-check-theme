@@ -145,6 +145,8 @@
 					return;
 				}
 
+				theme.remove_error();
+
 				var $form = $( this );
 				var $submit = $( '#screen-reader-check-form-submit' );
 
@@ -304,6 +306,13 @@
 			}
 
 			finish_callback( true );
+		},
+
+		remove_error: function() {
+			var $error = $( '#screen-reader-check-error' );
+			if ( $error.length ) {
+				$error.remove();
+			}
 		},
 
 		get_form_values: function( $form ) {
