@@ -237,8 +237,21 @@
 				}
 
 				var $field = $( '<div class="form-group"></div>' );
+
 				$field.append( '<label for="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '">' + result.request_data[ i ].label + '</label>' );
-				$field.append( '<input type="' + result.request_data[ i ].type + '" id="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '" name="' + result.request_data[ i ].slug + '" value="' + result.request_data[ i ].default + '" class="form-control" aria-describedby="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '_description" aria-required="true" required>' );
+
+				if ( 'select' === result.request_data[ i ].type ) {
+					var $select = $( '<select id="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '" name="' + result.request_data[ i ].slug + '" class="form-control" aria-describedby="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '_description" aria-required="true" required></select>' );
+					if ( result.request_data[ i ].options && result.request_data[ i ].options.length ) {
+						for ( var j in result.request_data[ i ].options ) {
+							$select.append( '<option value="' + result.request_data[ i ].options[ j ].value + '"' + ( result.request_data[ i ].options[ j ].value === result.request_data[ i ].default ? ' selected' : '' ) + '>' + result.request_data[ i ].options[ j ].label + '</option>' );
+						}
+					}
+					$field.append( $select );
+				} else {
+					$field.append( '<input type="' + result.request_data[ i ].type + '" id="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '" name="' + result.request_data[ i ].slug + '" value="' + result.request_data[ i ].default + '" class="form-control" aria-describedby="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '_description" aria-required="true" required>' );
+				}
+
 				$field.append( '<p id="test_' + result.test_slug + '-' + result.request_data[ i ].slug + '_description" class="form-text text-muted">' + result.request_data[ i ].description + '</p>' );
 
 				request_fields.push( $field );
