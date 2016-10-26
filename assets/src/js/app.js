@@ -220,21 +220,29 @@
 			var $div = $( '<div class="result-inner"></div>' );
 			$div.append( '<h4>' + result.test_title + '</h4>' );
 
+			// Temporary fix for a strange bug where the test links array contains another empty array accidentally.
+			if ( result.test_links && result.test_links.length === 1 && 'undefined' !== typeof result.test_links[0].length ) {
+				result.test_links = [];
+			}
+
 			var links = '';
-			if ( result.test_guideline_title.length && result.test_guideline_anchor.length ) {
+			if ( result.test_guideline_title && result.test_guideline_title.length && result.test_guideline_anchor && result.test_guideline_anchor.length ) {
 				links += '<strong>' + theme.i18n.wcag_guideline + ':</strong> <a href="https://www.w3.org/TR/WCAG20/#' + result.test_guideline_anchor + '" target="_blank">' + result.test_guideline_title + '</a>';
-				if ( result.test_links.length ) {
-					links += ' | ';
+				if ( result.test_links && result.test_links.length ) {
+					links += '<br>';
 				}
 			}
-			if ( result.test_links.length ) {
+			if ( result.test_links && result.test_links.length ) {
 				links += '<strong>' + theme.i18n.further_reading + ':</strong>';
 				for ( var i in result.test_links ) {
+					if ( 0 < i ) {
+						links += ' |';
+					}
 					links += ' <a href="' + result.test_links[ i ].target + '" target="_blank">' + result.test_links[ i ].title + '</a>';
 				}
 			}
 			if ( links.length ) {
-				$div.append( '<p class="text-lg-right"><small>' + links + '</small></p>' );
+				$div.append( '<p><small>' + links + '</small></p>' );
 			}
 
 			if ( result.test_description && result.test_description.length ) {
