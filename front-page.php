@@ -93,7 +93,12 @@ get_header(); ?>
 						</h3>
 
 						<div class="card-block">
-							<p><?php _e( 'This area shows results for your code check.', 'screen-reader-check-theme' ); ?></p>
+							<p>
+								<?php _e( 'This area shows results for your code check.', 'screen-reader-check-theme' ); ?>
+								<br>
+								<strong><?php _e( 'Be aware that this tool does not replace a manual accessibility evaluation.', 'screen-reader-check-theme' ); ?></strong>
+								<?php _e( 'It detects several structural errors, but only human judgement can properly ensure that layout and semantics of a website are actually helpful to screen reader users.', 'screen-reader-check-theme' ); ?>
+							</p>
 
 							<ul id="results-log" class="list-unstyled" aria-live="polite" aria-atomic="false"></ul>
 						</div>
