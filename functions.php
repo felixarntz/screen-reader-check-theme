@@ -82,6 +82,8 @@ function srctheme_enqueue_scripts() {
 		'i18n'			=> array(
 			'plugin_missing'              => __( 'Screen Reader Check plugin is missing!', 'screen-reader-check-theme' ),
 			'an_error_occurred'           => __( 'An error occurred!', 'screen-reader-check-theme' ),
+			'wcag_guideline'              => __( 'WCAG 2.0 Guideline', 'screen-reader-check-theme' ),
+			'further_reading'             => __( 'Further Reading', 'screen-reader-check-theme' ),
 			'close'                       => __( 'Close', 'screen-reader-check-theme' ),
 			'action_required'             => __( 'Your action is required.', 'screen-reader-check-theme' ),
 			'action_required_description' => __( 'In order to complete this test, you need to provide some more information.', 'screen-reader-check-theme' ),

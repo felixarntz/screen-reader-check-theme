@@ -220,6 +220,23 @@
 			var $div = $( '<div class="result-inner"></div>' );
 			$div.append( '<h4>' + result.test_title + '</h4>' );
 
+			var links = '';
+			if ( result.test_guideline_title.length && result.test_guideline_anchor.length ) {
+				links += '<strong>' + theme.i18n.wcag_guideline + ':</strong> <a href="https://www.w3.org/TR/WCAG20/#' + result.test_guideline_anchor + '" target="_blank">' + result.test_guideline_title + '</a>';
+				if ( result.test_links.length ) {
+					links += ' | ';
+				}
+			}
+			if ( result.test_links.length ) {
+				links += '<strong>' + theme.i18n.further_reading + ':</strong>';
+				for ( var i in result.test_links ) {
+					links += ' <a href="' + result.test_links[ i ].target + '" target="_blank">' + result.test_links[ i ].title + '</a>';
+				}
+			}
+			if ( links.length ) {
+				$div.append( '<p class="text-lg-right"><small>' + links + '</small></p>' );
+			}
+
 			if ( result.test_description && result.test_description.length ) {
 				$div.append( '<h5>' + theme.i18n.test_description + '</h5>' );
 				$div.append( '<p>' + result.test_description + '</p>' );

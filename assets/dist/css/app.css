@@ -6333,6 +6333,9 @@ body {
 	margin-bottom: 1rem;
 	border: 2px solid rgba(0, 0, 0, 0.125);
 }
+.results .result:last-child {
+	margin-bottom: 0;
+}
 .results .result .result-inner {
 	padding: 0.5rem 1rem;
 }
