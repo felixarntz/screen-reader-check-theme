@@ -62,7 +62,16 @@ get_header(); ?>
 											<?php while ( $i < $i_break ) : ?>
 												<div class="form-group">
 													<label for="options-<?php echo $options[ $i ]['slug']; ?>"><?php echo $options[ $i ]['label']; ?></label>
-													<input type="<?php echo $options[ $i ]['type']; ?>" id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" value="<?php echo $options[ $i ]['default']; ?>" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+													<?php if ( 'select' === $options[ $i ]['type'] ) : ?>
+														<select id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+															<option value=""><?php _e( 'Please select...', 'screen-reader-check-theme' ); ?></option>
+															<?php foreach ( $options[ $i ]['options'] as $value => $label ) : ?>
+																<option value="<?php echo $value; ?>"<?php echo $value === $options[ $i ]['default'] ? ' selected' : ''; ?>><?php echo $label; ?></option>
+															<?php endforeach; ?>
+														</select>
+													<?php else : ?>
+														<input type="<?php echo $options[ $i ]['type']; ?>" id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" value="<?php echo $options[ $i ]['default']; ?>" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+													<?php endif; ?>
 													<p id="options-<?php echo $options[ $i ]['slug']; ?>-description" class="form-text text-muted"><?php echo $options[ $i ]['description']; ?></p>
 												</div>
 												<?php $i++; ?>
@@ -73,7 +82,16 @@ get_header(); ?>
 											<?php while ( $i < count( $options ) ) : ?>
 												<div class="form-group">
 													<label for="options-<?php echo $options[ $i ]['slug']; ?>"><?php echo $options[ $i ]['label']; ?></label>
-													<input type="<?php echo $options[ $i ]['type']; ?>" id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" value="<?php echo $options[ $i ]['default']; ?>" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+													<?php if ( 'select' === $options[ $i ]['type'] ) : ?>
+														<select id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+															<option value=""><?php _e( 'Please select...', 'screen-reader-check-theme' ); ?></option>
+															<?php foreach ( $options[ $i ]['options'] as $value => $label ) : ?>
+																<option value="<?php echo $value; ?>"<?php echo $value === $options[ $i ]['default'] ? ' selected' : ''; ?>><?php echo $label; ?></option>
+															<?php endforeach; ?>
+														</select>
+													<?php else : ?>
+														<input type="<?php echo $options[ $i ]['type']; ?>" id="options-<?php echo $options[ $i ]['slug']; ?>" name="options[<?php echo $options[ $i ]['slug']; ?>]" value="<?php echo $options[ $i ]['default']; ?>" class="form-control form-control-sm" aria-describedby="options-<?php echo $options[ $i ]['slug']; ?>-description">
+													<?php endif; ?>
 													<p id="options-<?php echo $options[ $i ]['slug']; ?>-description" class="form-text text-muted"><?php echo $options[ $i ]['description']; ?></p>
 												</div>
 												<?php $i++; ?>
