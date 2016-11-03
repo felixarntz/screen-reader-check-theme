@@ -145,6 +145,7 @@
 					return;
 				}
 
+				$( '#results-log' ).empty();
 				theme.remove_error();
 
 				var $form = $( this );
